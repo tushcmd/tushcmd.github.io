@@ -33,5 +33,6 @@ One Python backend serves every surface, so a window means the same thing everyw
 
 - Code lives in a uv workspace monorepo.
 - Backend runs on Render from Dockerfiles built for that workspace, with a `render.yaml` Blueprint.
-- GitHub Actions handle CI and a keepalive workflow.
+<!-- - GitHub Actions handle CI and a keepalive workflow. -->
+- GitHub Actions handle CI
 - Domain is on Cloudflare.

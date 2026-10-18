@@ -4,7 +4,7 @@ dek: A public tool that estimates import duty from the KRA CRSP schedules.
 role: Designer and engineer
 status: Public
 stack: FastAPI, SQLite, Next.js
-links: Code|https://github.com/tushcmd/import-duty-calc
+links: Live|https://import-duty-calc.vercel.app/; Code|https://github.com/tushcmd/import-duty-calc
 ---
 
 ## The problem
@@ -27,4 +27,4 @@ links: Code|https://github.com/tushcmd/import-duty-calc
 ## Operations
 
 - Backend is hosted on Render.
-- A GitHub Actions keepalive keeps the first request after a quiet period fast.
+<!-- - A GitHub Actions keepalive keeps the first request after a quiet period fast. -->
