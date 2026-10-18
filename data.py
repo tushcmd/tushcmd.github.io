@@ -10,7 +10,8 @@ SITE = {
     "bio_points": [
         "Full-stack and mobile engineer based in Kenya.",
         "About three years of professional work in JavaScript and Python.",
-        "Building products for businesses running on M-Pesa.",
+        # "Building products for businesses running on M-Pesa.",
+        "Building tools, software and products.",
         "Exploring Rust for systems programming.",
     ],
     "location": "Kenya",
