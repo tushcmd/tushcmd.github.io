@@ -188,12 +188,12 @@ LEARNING = [
     "Computer architecture and networking",
 ]
 
-# NOW = {
-#     "updated": "October 2026",
-#     "items": [
-#         ("Building", "FNewsteer: the mobile app, the Chrome extension and the MCP server that sit on one shared backend."),
-#         ("Shipping", "The frontend for the MicroRootsKe ERP with Next.js, Tailwind CSS and shadcn/ui."),
-#         ("Learning", "Rust for systems programming, and RHCSA preparation in a Linux homelab."),
-#         ("Writing", "Notes on shipping AI features, support bots and dashboard design."),
-#     ],
-# }
+NOW = {
+    "updated": "October 2026",
+    "items": [
+        ("Building", "Tools, Software, Products"),
+        ("Shipping", "Scalable Stuff"),
+        ("Learning", "Rust for systems programming, and RHCSA preparation in a Linux homelab."),
+        ("Writing", "Notes on shipping features and products."),
+    ],
+}
