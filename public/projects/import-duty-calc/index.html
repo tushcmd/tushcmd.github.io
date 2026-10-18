@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kenya Import Duty Calculator | Muturi David</title>
+<meta name="description" content="A public tool that estimates import duty from the KRA CRSP schedules.">
+<link rel="canonical" href="https://tushdev.co/projects/import-duty-calc/">
+
+<meta property="og:title" content="Kenya Import Duty Calculator | Muturi David">
+<meta property="og:description" content="A public tool that estimates import duty from the KRA CRSP schedules.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tushdev.co/projects/import-duty-calc/">
+<meta property="og:site_name" content="Muturi David">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="Muturi David writing" href="/rss.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..900&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap">
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t)d.setAttribute('data-theme',t)}catch(e){}})()</script>
+<link rel="stylesheet" href="/assets/style.css?v=bb10bb9d">
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="c bar">
+    <a class="home" href="/" aria-label="Muturi David, home">
+      <span class="mark" aria-hidden="true">MD</span>
+      <span class="home-text"><span class="home-name">Muturi David</span><span class="home-sub">Software Engineer</span></span>
+    </a>
+    <div class="bar-actions">
+      <button class="theme" id="theme" type="button" aria-label="Toggle light and dark theme">Theme</button>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+  <nav class="menu" id="menu" aria-label="Main">
+    <div class="c menu-in">
+      <ol class="menu-list"><li><a href="/projects/" aria-current="page"><span>Projects</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li><li><a href="/writing/"><span>Writing</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li><li><a href="/stack/"><span>Stack</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li></ol>
+      <div class="menu-links"><a href="https://github.com/tushcmd" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg><span>GitHub</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a><a href="https://linkedin.com/in/tushdev" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg><span>LinkedIn</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a><a href="https://x.com/0xtush" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg><span>X</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a><a href="mailto:muturidavid854@gmail.com"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg><span>Email</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a><a href="/assets/Muturi_David_Resume.pdf" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><span>Resume</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div>
+    </div>
+  </nav>
+</header>
+<div id="progress" aria-hidden="true"></div>
+<main id="main" class="c main">
+
+<article class="article">
+  <a class="back" href="/projects/"><svg class="ico arr arr-w" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg><span>All projects</span></a>
+  <header class="head">
+    <p class="tag"><b>/</b> Case study</p>
+    <h1 class="title">Kenya Import Duty Calculator</h1>
+    <p class="dek">A public tool that estimates import duty from the KRA CRSP schedules.</p>
+    <dl class="facts">
+      <div><dt>Role</dt><dd>Designer and engineer</dd></div>
+      <div><dt>Status</dt><dd>Public</dd></div>
+      <div><dt>Stack</dt><dd>FastAPI, SQLite, Next.js</dd></div>
+      <div><dt>Links</dt><dd><a href="https://github.com/tushcmd/import-duty-calc" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg><span>Code</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></dd></div>
+    </dl>
+  </header>
+  <div class="prose"><h2 id="the-problem">The problem</h2>
+<ul><li>Duty on a vehicle, motorcycle or machine is worked out from the KRA CRSP schedules.</li><li>People want a number before they commit to a purchase, and the official route is a spreadsheet.</li></ul>
+<h2 id="the-approach">The approach</h2>
+<ul><li>The July 2025 schedules for vehicles, motorcycles and machinery sit in a SQLite database.</li><li>A FastAPI service computes the estimate.</li><li>A Next.js frontend takes the item details and shows the result.</li></ul>
+<h2 id="the-detail-that-mattered">The detail that mattered</h2>
+<ul><li>The first version of the formula did not match KRA's numbers.</li><li>The missing piece was a 1.25 dealer margin factor that KRA applies as an uplift.</li><li>With it included, results matched KRA's own Excel template to six decimal places.</li></ul>
+<h2 id="operations">Operations</h2>
+<ul><li>Backend is hosted on Render.</li><li>A GitHub Actions keepalive keeps the first request after a quiet period fast.</li></ul></div>
+</article>
+
+</main>
+<footer class="c foot-wrap">
+  <div class="foot">
+    <ul class="foot-links"><li><a href="https://github.com/tushcmd" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg><span>GitHub</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li><li><a href="https://linkedin.com/in/tushdev" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg><span>LinkedIn</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li><li><a href="https://x.com/0xtush" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg><span>X</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li><li><a href="mailto:muturidavid854@gmail.com"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg><span>Email</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li><li><a href="/assets/Muturi_David_Resume.pdf" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><span>Resume</span><svg class="ico arr arr-ne" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></li></ul>
+    <div class="foot-meta">
+      <span>&copy; 2026 Muturi David. All rights reserved.</span>
+      <span class="foot-right"><a href="/rss.xml">RSS</a><a class="top" href="#main"><span>Top</span><svg class="ico arr arr-n" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></a></span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/site.js?v=bb10bb9d" defer></script>
+</body>
+</html>

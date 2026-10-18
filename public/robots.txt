@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tushdev.co/sitemap.xml
