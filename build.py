@@ -190,7 +190,7 @@ def layout(path, title, desc, body, *, active="", article=False, og_type="websit
 <meta property="og:site_name" content="{esc(SITE['name'])}">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0a0a0a">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 <link rel="alternate" type="application/rss+xml" title="{esc(SITE['name'])} writing" href="/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
