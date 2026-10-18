@@ -1,0 +1,189 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+    <title>Tush Dev</title>
+    <meta name="claude:viewport-fit-sides" content="cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap">
+    <style>
+    /* Layout: one narrow column, name and clock on top, then Work and Projects as quiet ruled lists, links at the bottom. */
+    :root {
+      --bg: #f2f5f1;
+      --fg: #13201a;
+      --muted: #5a6a61;
+      --line: #d4dcd5;
+      --accent: #0c7a4d;
+      --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+      --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0e1411;
+        --fg: #e5ece7;
+        --muted: #8c9d93;
+        --line: #25302a;
+        --accent: #4fd994;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0e1411;
+      --fg: #e5ece7;
+      --muted: #8c9d93;
+      --line: #25302a;
+      --accent: #4fd994;
+      color-scheme: dark;
+    }
+    
+    * { box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      padding-block: 40px 56px;
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px));
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 48px; }
+    a { color: inherit; text-decoration-color: var(--line); text-underline-offset: 3px; transition: color .15s, text-decoration-color .15s; }
+    a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+    
+    .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .02em; }
+    .clock { display: inline-flex; align-items: center; gap: 8px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+    .theme { font: inherit; color: inherit; background: none; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+    .theme:hover { color: var(--accent); border-color: var(--accent); }
+    
+    header { display: flex; flex-direction: column; gap: 16px; }
+    h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.6rem, 9vw, 4rem); line-height: 1; letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+    .role { font-family: var(--font-mono); font-size: 13px; color: var(--accent); letter-spacing: .02em; margin: 0; }
+    .bio { margin: 0; max-width: 60ch; color: var(--fg); }
+    .bio span { color: var(--muted); }
+    
+    section { display: flex; flex-direction: column; gap: 4px; }
+    h2 { font-family: var(--font-mono); font-weight: 500; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+    ul { list-style: none; margin: 0; padding: 0; }
+    li { border-top: 1px solid var(--line); }
+    li:last-child { border-bottom: 1px solid var(--line); }
+    .row { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 16px 0; align-items: baseline; }
+    .row > * { min-width: 0; }
+    .name { font-weight: 500; }
+    .name a { text-decoration: none; }
+    .name a::after { content: " \2197"; color: var(--muted); font-family: var(--font-mono); font-size: .85em; transition: color .15s, transform .15s; display: inline-block; }
+    .name a:hover::after { color: var(--accent); transform: translate(2px, -2px); }
+    .when { font-family: var(--font-mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+    .desc { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 15px; max-width: 58ch; }
+    .stack { grid-column: 1 / -1; font-family: var(--font-mono); font-size: 12px; color: var(--muted); margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+    
+    footer { display: flex; flex-wrap: wrap; gap: 8px 24px; font-family: var(--font-mono); font-size: 13px; }
+    footer a { text-decoration: none; }
+    footer a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+    
+    @media (max-width: 480px) {
+      .row { grid-template-columns: 1fr; }
+      .when { white-space: normal; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+    </style>
+    
+    <div class="wrap">
+      <div class="top">
+        <span class="clock"><span class="dot" aria-hidden="true"></span><span id="clock">Kenya &middot; EAT</span></span>
+        <button class="theme" id="theme" type="button" aria-label="Toggle light and dark theme">Theme</button>
+      </div>
+    
+      <header>
+        <h1>Tush</h1>
+        <p class="role">Full-stack and mobile engineer &middot; solo founder</p>
+        <p class="bio">I'm Muturi David, a self-taught engineer in Kenya with about three years of professional experience in JavaScript and Python. <span>I build products end to end: web, mobile, backend and the infrastructure around them. Lately that means tools for traders and for businesses running on M-Pesa.</span></p>
+      </header>
+    
+      <section aria-labelledby="work">
+        <h2 id="work">Work</h2>
+        <ul>
+          <li>
+            <div class="row">
+              <span class="name"><a href="https://fnewsteer.co" target="_blank" rel="noopener">Founder, FNewsteer</a></span>
+              <span class="when">Mar 2026 &ndash; now</span>
+              <p class="desc">A trading loss-prevention app built around forex news blackout windows. One Python backend feeds a web dashboard, a Chrome extension, a mobile app and an MCP server for Claude Desktop.</p>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <span class="name">Frontend Engineer, MicroRootsKe</span>
+              <span class="when">ERP</span>
+              <p class="desc">The interface for an ERP that runs AI-assisted microgreens production.</p>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <span class="name">Software Engineering Resident and Fellow, Headstarter</span>
+              <span class="when">Accelerator</span>
+              <p class="desc">Shipped projects in a residency and fellowship program for early-career engineers.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    
+      <section aria-labelledby="projects">
+        <h2 id="projects">Projects</h2>
+        <ul>
+          <li>
+            <div class="row">
+              <span class="name"><a href="https://github.com/tushcmd/fnewsteer" target="_blank" rel="noopener">FNewsteer</a></span>
+              <span class="when">Web &middot; Mobile &middot; API</span>
+              <p class="desc">Warns traders before high-impact news and keeps them out of blackout windows. Includes an Android home screen widget and push alerts.</p>
+              <p class="stack"><span>FastAPI</span><span>Next.js</span><span>Expo</span><span>FastMCP</span></p>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <span class="name"><a href="https://github.com/tushcmd/import-duty-calc" target="_blank" rel="noopener">Kenya Import Duty Calculator</a></span>
+              <span class="when">Public tool</span>
+              <p class="desc">Estimates import duty on vehicles, motorcycles and machinery from the KRA CRSP schedules. The formula includes the 1.25 dealer margin factor and matches KRA's own template to six decimal places.</p>
+              <p class="stack"><span>FastAPI</span><span>SQLite</span><span>Next.js</span></p>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <span class="name">MukWamb Capital</span>
+              <span class="when">Fintech</span>
+              <p class="desc">Loan management for Kenyan microfinance, with admin and borrower portals. Handles M-Pesa STK Push, paybill reconciliation and OTP sign-in by SMS.</p>
+              <p class="stack"><span>Next.js</span><span>PostgreSQL</span><span>Drizzle</span><span>Daraja</span></p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    
+      <footer>
+        <a href="https://github.com/tushcmd" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/tushdev" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://tushdev.co" target="_blank" rel="noopener">tushdev.co</a>
+      </footer>
+    </div>
+    
+    <script>
+    (function () {
+      var root = document.documentElement;
+      var clock = document.getElementById("clock");
+      var fmt;
+      try { fmt = new Intl.DateTimeFormat("en-GB", { timeZone: "Africa/Nairobi", hour: "2-digit", minute: "2-digit", hour12: false }); } catch (e) {}
+      function tick() { if (fmt) clock.textContent = "Kenya · " + fmt.format(new Date()) + " EAT"; }
+      tick(); setInterval(tick, 30000);
+    
+      var btn = document.getElementById("theme");
+      btn.addEventListener("click", function () {
+        var current = root.getAttribute("data-theme");
+        if (!current) current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        root.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+      });
+    })();
+    </script>
+    
+    </body></html>
