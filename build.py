@@ -438,7 +438,7 @@ def main():
     posts = sorted((parse_file(p) for p in (CONTENT / "posts").glob("*.md")), key=lambda p: p["date"], reverse=True)
     cases = {p.stem: parse_file(p) for p in (CONTENT / "projects").glob("*.md")}
 
-    write("index.html", layout("/", f"{SITE['name']} ({SITE['handle']}), software engineer", SITE["description"], page_home(posts)))
+    write("index.html", layout("/", f"{SITE['name']} | Software Engineer", SITE["description"], page_home(posts)))
     write("projects/index.html", layout("/projects/", "Projects", "Products, tools and experiments across AI, fintech and full-stack engineering.", page_projects(), active="/projects/"))
     for slug, c in cases.items():
         write(f"projects/{slug}/index.html", layout(f"/projects/{slug}/", c["title"], c["dek"], page_case(c), active="/projects/", article=True))
