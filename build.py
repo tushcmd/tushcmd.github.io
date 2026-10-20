@@ -173,6 +173,7 @@ def layout(path, title, desc, body, *, active="", article=False, og_type="websit
     ld = f'<script type="application/ld+json">{json.dumps(jsonld)}</script>' if jsonld else ""
     robots = '<meta name="robots" content="noindex">' if noindex else ""
     progress = '<div id="progress" aria-hidden="true"></div>' if article else ""
+    og_image = f"{SITE['url']}/assets/og.png"
 
     return f"""<!doctype html>
 <html lang="en">
@@ -188,7 +189,12 @@ def layout(path, title, desc, body, *, active="", article=False, og_type="websit
 <meta property="og:type" content="{og_type}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:site_name" content="{esc(SITE['name'])}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{og_image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Muturi David, Software | Systems">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{og_image}">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 <link rel="alternate" type="application/rss+xml" title="{esc(SITE['name'])} writing" href="/rss.xml">

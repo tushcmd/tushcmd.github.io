@@ -6,10 +6,10 @@ SITE = {
     # "url": "https://tushdev.co",
     "url": "https://tushcmd.github.io",
     "email": "muturidavid854@gmail.com",
-    "role": "Full-stack and mobile engineer // Product Engineer",
-    "description": "Muturi David (Tush) is a full-stack web and mobile engineer in Kenya.",
+    "role": "Full-stack web and mobile engineer // Product Engineer",
+    "description": "Muturi David Software | Systems",
     "bio_points": [
-        "Full-stack and mobile engineer based in Kenya.",
+        "Full-stack web and mobile engineer based in Kenya.",
         "About three years of professional work in JavaScript and Python.",
         # "Building products for businesses running on M-Pesa.",
         "Building tools, software and products.",
