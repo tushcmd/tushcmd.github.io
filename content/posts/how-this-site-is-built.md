@@ -48,7 +48,7 @@ The trade-off is real. A framework gives you components, routing and a large eco
 - One narrow column, dark by default, with a light theme that follows the system setting.
 - Small text (13px) with even smaller labels, so pages feel dense but stay readable.
 - Lucide icons for every link and arrow, one SVG file each, so they are easy to swap.
-- Motion is limited to a staggered load, a fade on scroll and a pulsing dot, and all of it switches off for visitors who ask for reduced motion.
+- Motion is limited to a staggered load, a fade on scroll and a pulsing dot.
 
 ## A bug worth remembering
 

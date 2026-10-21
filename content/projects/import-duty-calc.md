@@ -27,4 +27,4 @@ links: Live|https://import-duty-calc.vercel.app/; Code|https://github.com/tushcm
 ## Operations
 
 - Backend is hosted on Render.
-<!-- - A GitHub Actions keepalive keeps the first request after a quiet period fast. -->
+- A GitHub Actions maintain CI.
